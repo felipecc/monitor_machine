@@ -17,7 +17,8 @@ $dbSenha 'senhaDoUsuario'
 
 ```
 
-![List Machines](/img/list_machines.png)
-![Add Machine](/img/add_machine.png)
-![Log Machine](/img/log_machine.png)
-![Filter Machine](/img/filter_machine.png)
+![List Machines](https://github.com/felipecc/monitor_machine/blob/main/img/list_machines.PNG)
+![Add Machine](https://github.com/felipecc/monitor_machine/blob/main/img/add_machine.PNG)
+![Log Machine](https://github.com/felipecc/monitor_machine/blob/main/img/log_machine.PNG)
+![Filter Machine](https://github.com/felipecc/monitor_machine/blob/main/img/filter_example.PNG)
+
