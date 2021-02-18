@@ -7,7 +7,6 @@ Two parts were developed for this application, one being the PHP front-end as re
 As a point of observation, the target machine must have the monitoring machine's public key in its ~ / .ssh / known_hosts file. This part is required for a connection without the need for a password.
 ## Configuration:
 
-- Executar a query pessoa.sql ou importar o arquivo no phpMyAdmin para criar a table necessária.
 - Edit file **database.php** 
 
 ```
