@@ -16,3 +16,8 @@ $dbUsuario = 'usuarioDoMysql'
 $dbSenha 'senhaDoUsuario'
 
 ```
+
+![List Machines](/img/list_machines.png)
+![Add Machine](/img/add_machine.png)
+![Log Machine](/img/log_machine.png)
+![Filter Machine](/img/filter_machine.png)

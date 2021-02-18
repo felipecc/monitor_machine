@@ -60,6 +60,8 @@
                                     echo '<th scope="row">'. $row['id'] . '</th>';
                                     echo '<td>'. $row['time_ref'] . '</td>';
                                     echo '<td width=500>';
+                                    echo '<a class="btn btn-primary" href="connection.php?id='.$row['id'].'&&machine='.$machineName.'&&datetimelog='.$row['time_ref'].'">Connection</a>';
+                                    echo ' ';                                    
                                     echo '<a class="btn btn-primary" href="cpu.php?id='.$row['id'].'&&machine='.$machineName.'&&datetimelog='.$row['time_ref'].'">CPU</a>';
                                     echo ' ';
                                     echo '<a class="btn btn-primary" href="read.php?id='.$row['id'].'&&machine='.$machineName.'&&datetimelog='.$row['time_ref'].'">Men</a>';

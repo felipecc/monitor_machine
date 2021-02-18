@@ -13,18 +13,18 @@
         <div class="jumbotron">
             <div class="row">
                 <?php
-                    $machineName = null;
-                    if(!empty($_GET['machine'])){
-                        $machineName = $_REQUEST['machine'];
-                    }
+                        $machineName = null;
+                        if(!empty($_GET['machine'])){
+                            $machineName = $_REQUEST['machine'];
+                        }
 
-                    $datetimeLog = null;
-                    if(!empty($_GET['datetimelog'])){
-                        $datetimeLog = $_REQUEST['datetimelog'];
-                    }
-                    echo '<h2> Logs >'.$machineName.'>'.$datetimeLog.'> Proccess </h2>';
-                
-                ?>
+                        $datetimeLog = null;
+                        if(!empty($_GET['datetimelog'])){
+                            $datetimeLog = $_REQUEST['datetimelog'];
+                        }
+                        echo '<h2> Logs >'.$machineName.'>'.$datetimeLog.'> Connection </h2>';
+                    
+                    ?>
             </div>
           </div>
             </br>
@@ -37,15 +37,7 @@
                     <thead>
                         <tr>
                             <th scope="col">Id</th>
-                            <th scope="col">User</th>
-                            <th scope="col">PID</th>
-                            <th scope="col">VSZ</th>
-                            <th scope="col">RSS</th>                            
-                            <th scope="col">TTY</th>
-                            <th scope="col">Stat</th>
-                            <th scope="col">Start</th>
-                            <th scope="col">Time</th>
-                            <th scope="col">Command</th>
+                            <th scope="col">Connected</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -61,7 +53,7 @@
                             } else {
                                 $pdo = Database::conectar();
                                 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                                $sql = 'select * from proccess_running where ref_time_id = :ref_time_id';                                
+                                $sql = 'select * from connection_active where ref_time_id = :ref_time_id';                                
                                
 
                                 $q = $pdo->prepare($sql);
@@ -73,15 +65,7 @@
                                 {
                                     echo '<tr>';
                                     echo '<th scope="row">'. $row['id'] . '</th>';
-                                    echo '<td>'. $row['user'] . '</td>';
-                                    echo '<td>'. $row['pid'] . '</td>';
-                                    echo '<td>'. $row['vsz'] . '</td>';
-                                    echo '<td>'. $row['rss'] . '</td>';
-                                    echo '<td>'. $row['tty'] . '</td>';
-                                    echo '<td>'. $row['stat'] . '</td>';
-                                    echo '<td>'. $row['start'] . '</td>';
-                                    echo '<td>'. $row['time'] . '</td>';
-                                    echo '<td>'. $row['command'] . '</td>';
+                                    echo '<td>'. $row['connected'] . '</td>';
                                 }
 
                                 Database::desconectar();
